@@ -1,6 +1,8 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
+  state = { term: '' };
+
   render() {
     return (
       <section className="section section-search red darken-4 white-text center">
@@ -13,7 +15,7 @@ class SearchBar extends React.Component {
                   className="white grey-text autocomplete"
                   placeholder="  Watch Something Now!"
                   type="text"
-                  id="autocomplete-input"
+                  value={this.state.term}
                 />
               </div>
             </div>

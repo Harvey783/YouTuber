@@ -1,9 +1,12 @@
 import React from 'react';
 import './Video.css';
 
-const Video = ({ video }) => {
+const Video = ({ video, onVideoSelect }) => {
   return (
-    <div className="video-collection collection-item avatar">
+    <div
+      onClick={() => onVideoSelect(video)}
+      className="video-collection collection-item avatar"
+    >
       <img src={video.snippet.thumbnails.medium.url} alt="" />
       <span className="video-title title">{video.snippet.title}</span>
     </div>

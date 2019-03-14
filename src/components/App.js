@@ -4,7 +4,7 @@ import api from '../api/api';
 import VideoList from './VideoList';
 
 class App extends React.Component {
-  state = { videos: [] };
+  state = { videos: [], selectedVideo: null };
 
   onSearchSubmit = async term => {
     const response = await api.get('/search', {
@@ -17,11 +17,18 @@ class App extends React.Component {
     });
   };
 
+  onVideoSelect = video => {
+    console.log('TEST', video);
+  };
+
   render() {
     return (
       <div>
         <SearchBar onFormSubmit={this.onSearchSubmit} />
-        <VideoList videos={this.state.videos} />
+        <VideoList
+          onVideoSelect={this.onVideoSelect}
+          videos={this.state.videos}
+        />
       </div>
     );
   }

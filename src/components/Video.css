@@ -1,0 +1,13 @@
+.video-collection {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer;
+}
+
+.video-collection.collection-item.avatar img {
+  max-width: 200px;
+}
+
+.video-title.title {
+  padding-left: 20px;
+}

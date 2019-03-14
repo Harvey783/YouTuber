@@ -7,14 +7,20 @@ class SearchBar extends React.Component {
     this.setState({ term: e.target.value });
   };
 
+  onFormSubmit = e => {
+    e.preventDefault();
+
+    this.props.onFormSubmit(this.state.term);
+  };
+
   render() {
     return (
       <section className="section section-search red darken-4 white-text center">
         <div className="container">
-          <div className="row">
-            <div className="col s12">
-              <h4 className="left-align">YouTuber</h4>
-              <form onSubmit={this.onFormSubmit}>
+          <form onSubmit={this.onFormSubmit}>
+            <div className="row">
+              <div className="col s12">
+                <h4 className="left-align">YouTuber</h4>
                 <div className="input-field">
                   <input
                     className="white grey-text autocomplete"
@@ -24,9 +30,9 @@ class SearchBar extends React.Component {
                     onChange={this.onInputChange}
                   />
                 </div>
-              </form>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </section>
     );

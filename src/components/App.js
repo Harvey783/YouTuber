@@ -7,6 +7,10 @@ import VideoShow from "./VideoShow";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+  componentDidMount() {
+    this.onSearchSubmit("funny dog");
+  }
+
   onSearchSubmit = async term => {
     const response = await api.get("/search", {
       params: {

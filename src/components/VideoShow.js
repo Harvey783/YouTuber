@@ -16,7 +16,7 @@ const VideoShow = ({ video }) => {
           src={videoSrc}
           frameBorder="0"
           title="video-player"
-          allowFullscreen
+          allowFullScreen
         />
       </div>
       <div className="card blue-grey darken-1">

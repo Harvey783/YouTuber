@@ -12,13 +12,14 @@ class App extends React.Component {
         q: term
       }
     });
+
     this.setState({
       videos: response.data.items
     });
   };
 
   onVideoSelect = video => {
-    console.log('TEST', video);
+    this.setState({ selectedVideo: video });
   };
 
   render() {

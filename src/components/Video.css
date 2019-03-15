@@ -4,10 +4,20 @@
   cursor: pointer;
 }
 
-.video-collection.collection-item.avatar img {
-  max-width: 200px;
+.video-collection.collection-item img {
+  max-width: 175px;
+  max-height: 98.44px;
+}
+
+.video-collection.collection-item {
+  padding-left: 10px;
 }
 
 .video-title.title {
   padding-left: 20px;
+  font-size: 12px;
+}
+
+.video-col.col.s8 {
+  padding-top: 20px;
 }

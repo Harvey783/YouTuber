@@ -1,21 +1,22 @@
-import React from 'react';
-import SearchBar from './SearchBar';
-import api from '../api/api';
-import VideoList from './VideoList';
-import VideoShow from './VideoShow';
+import React from "react";
+import SearchBar from "./SearchBar";
+import api from "../api/api";
+import VideoList from "./VideoList";
+import VideoShow from "./VideoShow";
 
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
   onSearchSubmit = async term => {
-    const response = await api.get('/search', {
+    const response = await api.get("/search", {
       params: {
         q: term
       }
     });
 
     this.setState({
-      videos: response.data.items
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
     });
   };
 
@@ -28,7 +29,7 @@ class App extends React.Component {
       <div>
         <SearchBar onFormSubmit={this.onSearchSubmit} />
         <div className="row">
-          <div className="col s8">
+          <div className="video-col col s8">
             <VideoShow video={this.state.selectedVideo} />
           </div>
           <div className="col s4">

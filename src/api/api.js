@@ -5,6 +5,6 @@ export default axios.create({
   params: {
     maxResults: 5,
     key: KEY,
-    part: 'snippett'
+    part: 'snippet'
   }
 });

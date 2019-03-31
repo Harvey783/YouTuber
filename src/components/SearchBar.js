@@ -1,4 +1,5 @@
 import React from 'react';
+import './Style.css';
 
 class SearchBar extends React.Component {
   state = { term: '' };
@@ -16,22 +17,28 @@ class SearchBar extends React.Component {
     return (
       <section className="section section-search red darken-4 white-text center">
         <div className="container">
-          <form onSubmit={this.onFormSubmit}>
-            <div className="row">
-              <div className="col s12">
-                <h4 className="left-align">YouTuber</h4>
-                <div className="input-field">
-                  <input
-                    className="white grey-text autocomplete"
-                    placeholder="  Watch Something Now!"
-                    type="text"
-                    value={this.state.term}
-                    onChange={this.onInputChange}
-                  />
-                </div>
+          <div className="row">
+            <div className="col s12">
+              <h4 className="left-align">YouTuber</h4>
+              <div className="nav-wrapper">
+                <form onSubmit={this.onFormSubmit}>
+                  <div className="input-field">
+                    <input
+                      className="white grey-text autocomplete"
+                      placeholder="  Watch Something Now!"
+                      type="search"
+                      id="search"
+                      value={this.state.term}
+                      onChange={this.onInputChange}
+                    />
+                    <label className="label-icon red-text">
+                      <i className="material-icons">search</i>
+                    </label>
+                  </div>
+                </form>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </section>
     );

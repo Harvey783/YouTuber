@@ -10,9 +10,3 @@ const VideoList = ({ videos, onVideoSelect }) => {
 };
 
 export default VideoList;
-
-/* <div className="collection">{renderVideoList}</div>; */
-
-/* <div>
-<ul className="video-collection collection">{renderVideoList}</ul>
-</div> */

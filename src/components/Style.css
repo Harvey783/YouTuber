@@ -1,0 +1,43 @@
+.video-col.col.s7 {
+  margin-top: 10px;
+  padding-right: 5px;
+}
+
+.col.s5 {
+  padding-left: 0;
+}
+
+.section.section-search {
+  height: 170px;
+  padding: 0px;
+}
+
+.input-field {
+  margin: 0;
+  height: 50px;
+}
+
+label {
+  padding: 15px 0;
+}
+
+.video-collection {
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer;
+}
+
+.video-collection.collection-item img {
+  max-width: 175px;
+  max-height: 98.44px;
+}
+
+.video-collection.collection-item {
+  padding: 5px;
+}
+
+.video-title.title {
+  padding-left: 8px;
+  font-size: 11px;
+  line-height: 15px;
+}

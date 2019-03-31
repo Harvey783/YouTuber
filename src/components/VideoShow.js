@@ -30,7 +30,3 @@ const VideoShow = ({ video }) => {
 };
 
 export default VideoShow;
-
-/* <div className="card">
-<div>{video.snippet.title}</div>
-</div> */
